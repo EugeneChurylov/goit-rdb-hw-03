@@ -1,0 +1,26 @@
+1.1
+select * from products
+
+1.2
+select name, phone from shippers
+
+2
+SELECT
+	AVG(price) AS avarage_price,
+	MAX(price) AS max_price,
+	MIN(price) AS min_price
+FROM
+	products;
+
+3
+select distinct category_id, price from products
+order by price desc
+LIMIT 10
+
+4
+select count(price) as quantity from products
+where price >= 20 and price <= 100
+
+5
+select supplier_id, count(*) as product_count, avg(price) as avarage_price from products
+group by supplier_id
